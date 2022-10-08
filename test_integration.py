@@ -4,6 +4,7 @@ from gilded_rose_solution import GildedRose
 from item import Item
 from aged_brie import AgedBrie
 from sulfuras import Sulfuras
+from backstage import BackstagePasses
 
 class GildedRoseTest(unittest.TestCase):
     def test_regular_items(self):
@@ -38,13 +39,13 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(3, items[0].sell_in)
         self.assertEqual(-3, items[1].quality)
         self.assertEqual(33, items[1].sell_in)
-    #
-    # def test_sulfuras(self):
-    #     items = [Item("Backstage passes to a TAFKAL80ETC concert", 3, 1), Item("Backstage passes to a TAFKAL80ETC concert", 33, -3)]
-    #     gilded_rose = GildedRose(items)
-    #     gilded_rose.update_quality()
-    #     self.assertEqual(1, items[0].quality)
-    #     self.assertEqual(3, items[0].sell_in)
+
+    def backstage_passes(self):
+        items = [BackstagePasses(3, 1), BackstagePasses(33, -3)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(1, items[0].quality)
+        self.assertEqual(3, items[0].sell_in)
 
 if __name__ == '__main__':
     unittest.main()
