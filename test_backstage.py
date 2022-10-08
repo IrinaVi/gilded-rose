@@ -3,7 +3,7 @@ import unittest
 
 class BackstagePasses(unittest.TestCase):
     def backstage_passes_updates_test(self):
-        items = [BackstagePasses("Backstage passes", 20, 23), BackstagePasses("Backstage passes", 10, 2), BackstagePasses("Backstage passes", 7, 0), BackstagePasses("Backstage passes", 5, 9), BackstagePasses("Backstage passes", 1, 5)]
+        items = [BackstagePasses(20, 23), BackstagePasses(10, 2), BackstagePasses(7, 0), BackstagePasses(5, 9), BackstagePasses(1, 5)]
         for item in items:
             item.update_quality()
         self.assertEqual(24, items[0].quality)
