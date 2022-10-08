@@ -4,7 +4,7 @@ from aged_brie import AgedBrie
 class AgedBrieTest(unittest.TestCase):
 
     def test_aged_brie(self):
-        items = [AgedBrie("Aged Brie", 0, 0), AgedBrie("Aged Brie", 5, 2), AgedBrie("Aged Brie", 4, 50), AgedBrie("Aged Brie", -4, 10)]
+        items = [AgedBrie(0, 0), AgedBrie(5, 2), AgedBrie(4, 50), AgedBrie(-4, 10)]
         for item in items:
             item.update_quality()
         self.assertEqual(2, items[0].quality)
