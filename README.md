@@ -20,8 +20,25 @@ We have recently signed a supplier of conjured items. This requires an update to
 Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."*
 
 ## Project approach
-
 To solve this test I used Python and Unittest.
+
+To solve this tech test I used the main principles of OOP: inheritance and polymorphism.<br> 
+The main goal in the test was the ability to add new items to the system without needing to change the code that updates sell in and quality every time.<br>
+As all items have the same attributes (sell-in and quality) and method (update quality) this gave me an understanding that the inheritance principle must be used.<br>
+However, several items (aged brie, sulfuras, and backstage passes) have slightly different rules in the way the update quality method would work for them. 
+Hence, here we can use another OOP principle - polymorphism.<br>
+
+In my solution, I introduced children classes that inherit from the parent item class. This was needed so I could reuse all the same attributes 
+from the parent class, but change the update quality method.<br>
+
+If new items need to be added to the store and the way their quality updates are different from the main item, this can be done by adding
+a new class and changing the update quality method.<br>
+
+When the quality update is needed, all items can be created from the corresponding classes and passed as an argument to the gilded rose class.
+Then the update quality method can be called. As the update quality method is slightly different for different children's classes, the 
+quality will be updated according to the rules.
+
+💙 I really enjoyed the test, it was fun to learn about inheritance and polymorphism through a good example! 
 
 ## Table of Contents
 
