@@ -1,4 +1,4 @@
-#Gilded rose tech test
+# Gilded rose tech test
 
 This is a well known kata developed by Terry Hughes. This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
 
@@ -19,11 +19,11 @@ We have recently signed a supplier of conjured items. This requires an update to
 “Conjured” items degrade in Quality twice as fast as normal items
 Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."*
 
-##Project approach
+## Project approach
 
 To solve this test I used Python and Unittest.
 
-##Table of Contents
+## Table of Contents
 
 The test consists of the following files:
 1. gilded_rose.py - the original code of the test.
@@ -31,11 +31,11 @@ The test consists of the following files:
 3. item.py, aged_brie.py, sulfuras.py and backstage.py - one file for each of the corresponding items: parent class: item, children: aged brie, sulfuras and backstage.
 4. Test files: 1 integration test and 4 files for unit test for each of the classes.
 
-##Project Dependencies
+## Project Dependencies
 1. Install the latest Python version
 2. Install Unittest
 
-##How to use the project
+## How to use the project
 First, create item objects from the desired classes with the initial sell_in and quality values. Add the items to a list and assign the list to a variable, e.g.<br>
 `items = [AgedBrie(0, 0),Sulfuras(3, 1),BackstagePasses(3, 1),Item(5,2)]`
 
