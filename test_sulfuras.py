@@ -3,7 +3,7 @@ from sulfuras import Sulfuras
 
 class SulfurasTest(unittest.TestCase):
     def test_sulfuras(self):
-        items = [Sulfuras("Sulfuras, Hand of Ragnaros", 3, 1), Sulfuras("Sulfuras, Hand of Ragnaros", -33, 0)]
+        items = [Sulfuras(3, 1), Sulfuras(-33, 0)]
         for item in items:
             item.update_quality()
         self.assertEqual(1, items[0].quality)

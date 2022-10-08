@@ -1,5 +1,4 @@
 import unittest
-#from gilded_rose import Item, GildedRose
 from gilded_rose_solution import GildedRose
 from item import Item
 from aged_brie import AgedBrie
